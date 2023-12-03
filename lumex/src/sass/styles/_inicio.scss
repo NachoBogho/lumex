@@ -1,0 +1,57 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';   
+
+.inicio-display{
+    @include flex-row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $bg-color-dark;
+    height: 100vh;
+    text-align: center;
+    
+    .titular{
+        @include flex-column;
+        gap: 2vw;
+        width: 35vw;
+
+        p{
+        font-family: $font-monserrat;
+        color: $font-color;
+        font-size: 1.5vw;
+        }
+        h1{
+        font-family: averox;
+        font-size: 6vw;
+        color: $font-color;
+        font-weight: bold;
+    }
+    }
+    .texto-frase{
+        font-family: averox;
+        font-size: 1vw;
+        font-weight: bold;
+        background: #ccc;
+        background: linear-gradient(90deg, $color-degradado, $color-hover);
+        -webkit-text-fill-color:transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+
+    }
+
+  
+    
+
+    .texto-display{
+        @include flex-column;
+        gap: 3vw;
+
+    }
+
+    img{
+        width: 20.8vw;
+        height: auto;
+    }
+
+
+    
+}

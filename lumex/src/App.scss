@@ -1,0 +1,23 @@
+@import './sass/abstracts/mixins';
+@import './sass/abstracts/variables';   
+
+*::-webkit-scrollbar{
+    background: #1c1c1c;
+    width: 6px;
+}
+*::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, $color-degradado, $color-hover);;
+    width: 5px;
+    border-radius: 6px;
+    opacity: 0.6;
+}
+
+*{
+    scroll-behavior: smooth;
+}
+
+
+.page-display{
+    @include flex-column
+
+}
