@@ -1,6 +1,7 @@
 import './App.scss'
 import Index from './components/Index'
 import NavBar from './components/NavBar'
+import Servicios from './components/Servicios'
 
 
 
@@ -12,6 +13,7 @@ function App() {
     <div className='page-display'>
       <NavBar />
       <Index />
+      <Servicios/>
 
     </div>
 

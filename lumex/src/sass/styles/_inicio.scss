@@ -6,7 +6,7 @@
     justify-content: space-evenly;
     align-items: center;
     background-color: $bg-color-dark;
-    height: 100vh;
+    height: auto;
     text-align: center;
     
     .titular{
@@ -30,20 +30,40 @@
         font-family: averox;
         font-size: 1vw;
         font-weight: bold;
-        background: #ccc;
-        background: linear-gradient(90deg, $color-degradado, $color-hover);
-        -webkit-text-fill-color:transparent;
-        -webkit-background-clip: text;
-        background-clip: text;
-
+       @include degradado;
     }
 
-  
+    .display-flechas{
+        @include flex-column;
+        gap: .5vw;
+        margin-top: 5vw;
+        
+        .flecha{
+            font-size: 1vw;
+            font-weight: bold;
+            @include degradado;
+            animation: bounce 0.8s alternate infinite ease-in;
+            
+            
     
+            @keyframes bounce{
+                0%{
+                    transform: translateY(-50%);
+                }
+                100%{
+                    transform: translateY(0%);
+                }
+            }
+        }
 
+        
+
+    }
+    
     .texto-display{
         @include flex-column;
         gap: 3vw;
+        margin-top: 11vw;
 
     }
 

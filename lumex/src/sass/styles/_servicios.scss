@@ -1,0 +1,95 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.servicios-display {
+    margin-top: 5vw;
+    @include flex-column;
+    justify-content: start;
+    align-items: center;
+    background-color: $bg-color-dark;
+    height: 100vh;
+    font-family: $font-monserrat;
+    gap: 5vw;
+    text-align: center;
+
+    h3{
+        font-family: averox;
+        font-size: 2.5vw;
+       @include degradado;
+        font-weight: bold
+    }
+
+    .cards-display{
+        @include flex-row;
+        justify-content: space-evenly;
+        gap: 5vw;
+        width: 70%;
+        color: $font-color;
+        
+
+        .cards{
+            @include flex-column;
+            gap: 2vw;
+            height: auto;
+            border: solid 0.15vw $color-degradado;
+            background-color: #202020;
+            border-radius: 2vw;
+
+            h5{
+                margin-top: 2vw;
+                font-size: 2vw;
+                font-family: averox;
+            }
+
+            p{
+                font-size: 0.7vw;
+                padding: 2vw;
+            }
+        
+            ul{
+                @include flex-column;
+                gap: 1vw;
+                padding-left: 2vw;
+            }
+
+            a{
+                text-decoration: none;
+                color: $font-color;
+                font-family: averox;
+                font-size: 1vw;
+                color: $color-hover;
+                margin-bottom: 2vw;
+                
+                &:hover{
+                    font-weight: bold;
+                    transition: all 0.5s ease-in-out; 
+                    font-size: 1.1vw;
+                }
+                
+            }
+
+            .details-list{
+                font-size: 0.8vw;
+                text-align: start;
+                @include flex-row;
+                justify-content: start;
+                align-items: center;
+                gap: 1vw;
+
+                span{
+                    font-weight: bold;
+                    font-size:1.5vw;
+                    @include degradado;
+
+                }
+            }
+
+            &:hover{
+                transform: matrix(1.03, 0, 0, 1.03, 0, 0);
+                transition: all 0.5s ease-in-out;
+            }
+            
+        }
+    }
+
+}

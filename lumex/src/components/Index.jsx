@@ -31,6 +31,11 @@ const Index = () => {
               tickCambioLetra={80}
             />
           </p>
+      <div className='display-flechas'>
+          <p className='flecha'>▽</p>
+          <p className='flecha'>▽</p>
+          <p className='flecha'>▽</p>
+      </div>
         </div>
         <img src="../../public/img/mano.png" alt="" />
       </div>

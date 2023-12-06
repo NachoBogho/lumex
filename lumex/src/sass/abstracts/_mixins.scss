@@ -22,3 +22,10 @@
     align-items: center;
 }
 
+@mixin degradado{
+    background: #ccc;
+    background: linear-gradient(90deg, $color-degradado, $color-hover);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
