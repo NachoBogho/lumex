@@ -11,64 +11,86 @@
     font-family: $font-monserrat;
     gap: 5vw;
     text-align: center;
+    view-timeline-name: --cards;
+    view-timeline-axis: block;
 
-    h3{
+    animation-timeline: --cards;
+    animation-name: show;
+
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
+
+    @keyframes show {
+        from {
+            opacity: 0;
+            scale: 80%;
+        }
+
+        to {
+            opacity: 1;
+            scale: 100%;
+        }
+
+    }
+
+    h3 {
         font-family: averox;
         font-size: 2.5vw;
-       @include degradado;
+        @include degradado;
         font-weight: bold
     }
 
-    .cards-display{
+    .cards-display {
         @include flex-row;
         justify-content: space-evenly;
         gap: 5vw;
         width: 70%;
         color: $font-color;
-        
 
-        .cards{
+
+        .cards {
             @include flex-column;
             gap: 2vw;
             height: auto;
             border: solid 0.15vw $color-degradado;
             background-color: #202020;
             border-radius: 2vw;
+        
 
-            h5{
+            h5 {
                 margin-top: 2vw;
                 font-size: 2vw;
                 font-family: averox;
             }
 
-            p{
+            p {
                 font-size: 0.7vw;
                 padding: 2vw;
             }
-        
-            ul{
+
+            ul {
                 @include flex-column;
                 gap: 1vw;
                 padding-left: 2vw;
             }
 
-            a{
+            a {
                 text-decoration: none;
                 color: $font-color;
                 font-family: averox;
                 font-size: 1vw;
                 color: $color-hover;
                 margin-bottom: 2vw;
-                
-                &:hover{
+
+                &:hover {
                     font-weight: bold;
-                    transition: all 0.5s ease-in-out; 
+                    transition: all 0.5s ease-in-out;
                     font-size: 1.1vw;
                 }
-                
+
             }
 
-            .details-list{
+            .details-list {
                 font-size: 0.8vw;
                 text-align: start;
                 @include flex-row;
@@ -76,20 +98,24 @@
                 align-items: center;
                 gap: 1vw;
 
-                span{
+                span {
                     font-weight: bold;
-                    font-size:1.5vw;
+                    font-size: 1.5vw;
                     @include degradado;
 
                 }
             }
 
-            &:hover{
+            &:hover {
                 transform: matrix(1.03, 0, 0, 1.03, 0, 0);
                 transition: all 0.5s ease-in-out;
             }
-            
+
         }
     }
 
+}
+
+.kkk {
+    height: 100vh;
 }

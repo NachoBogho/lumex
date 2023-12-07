@@ -1,8 +1,8 @@
 import './App.scss'
 import Index from './components/Index'
 import NavBar from './components/NavBar'
+import Nosotros from './components/Nosotros'
 import Servicios from './components/Servicios'
-
 
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
       <NavBar />
       <Index />
       <Servicios/>
+      <Nosotros/>
 
     </div>
 

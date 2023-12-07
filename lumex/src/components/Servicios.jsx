@@ -3,7 +3,7 @@ import '../sass/styles/_servicios.scss';
 
 const Servicios = () => {
   return (
-    <section className='servicios-display'>
+    <section id='servicios' className='servicios-display'>
       <h3>Servicios</h3>
       <div className='cards-display'>
         <div className='cards'>
