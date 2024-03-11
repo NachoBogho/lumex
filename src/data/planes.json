@@ -1,0 +1,49 @@
+[
+    {
+      "id": "LP123",
+      "nombre": "LANDING PAGE",
+      "precio": 99.99,
+      "descripcion": "Una landing page profesional diseñada para captar la atención de tus visitantes y convertirlos en clientes. Incluye un diseño moderno y atractivo, optimización para dispositivos móviles y todas las herramientas necesarias para impulsar tus ventas.",
+      "imagen": "../../public/img/planes/landing.webp"
+    },
+    {
+      "id": "BW456",
+      "nombre": "BLOG WEB",
+      "precio": 79.99,
+      "descripcion": "Un blog web perfecto para compartir tus ideas, pensamientos y conocimientos con el mundo. Con un diseño limpio y elegante, integración de redes sociales y capacidad de gestión de contenido fácil de usar.",
+      "imagen": "../../public/img/planes/blog.webp"
+    },
+    {
+      "id": "EC789",
+      "nombre": "E-COMMERCE",
+      "precio": 199.99,
+      "descripcion": "Una tienda en línea completa con todas las funciones necesarias para vender tus productos en internet. Incluye carrito de compras, opciones de pago seguras y administración de inventario.",
+      "imagen": "../../public/img/planes/tienda.webp"
+    },
+    {
+      "id": "PF101",
+      "nombre": "PORTAFOLIO PERSONAL",
+      "precio": 59.99,
+      "descripcion": "Un portafolio personalizado para mostrar tus habilidades, proyectos y experiencia profesional de manera atractiva. Con un diseño moderno y opciones de personalización flexibles.",
+      "imagen": "../../public/img/planes/portafolio.webp"
+    },
+    {
+      "id": "CM111",
+      "nombre": "PORTAL DE NOTICIAS",
+      "precio": 149.99,
+      "descripcion": "Un portal de noticias completo con funcionalidades de publicación, categorización y comentarios de usuarios. Perfecto para sitios web de medios de comunicación y blogs de noticias.",
+      "imagen": "../../public/img/planes/noticias.webp"
+    },
+
+    {
+      "id": "PW444",
+      "nombre": "WEB PERSONALIZADA",
+      "precio": 299.99,
+      "descripcion": "Una página web totalmente personalizada diseñada según tus especificaciones y necesidades. Desde diseños simples hasta soluciones avanzadas, todo es posible.",
+      "imagen": "../../public/img/planes/personalizada.webp"
+    }
+    
+  ]
+
+
+  

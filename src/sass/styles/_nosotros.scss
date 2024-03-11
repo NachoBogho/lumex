@@ -1,0 +1,120 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.nosotros-display {
+    margin-top: 3vw;
+    @include flex-column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 6vw;
+    margin-bottom: 4vw;
+    view-timeline-name: --cards;
+    view-timeline-axis: block;
+
+    animation-timeline: --cards;
+    animation-name: show;
+
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
+
+    @keyframes show {
+        from {
+            opacity: 0;
+            scale: 80%;
+        }
+
+        to {
+            opacity: 1;
+            scale: 100%;
+        }
+
+    }
+
+    h2 {
+        font-family: averox;
+        font-size: 2.5vw;
+        @include degradado;
+        font-weight: bold
+    }
+
+    .nosotros-sec{
+        @include flex-row;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+        border-top: solid 0.01vw $color-hover;
+        border-bottom: solid 0.01vw $color-hover;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        margin-top: 4vw;
+    }
+    .nosotros-sec a{
+        color: $font-color;
+        font-size: 2vw;
+        font-family: averox;
+        text-decoration: none;
+
+    }
+
+    .flecha {
+        font-size: 2vw;
+        @include degradado;
+    }
+
+
+
+
+    .trabajo-display {
+        @include flex-row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 2vw;
+        padding: 2vw;
+        
+
+        .trabajo-display-md{
+            @include flex-row;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5vw;
+        }
+
+        .trabajo-display-res{
+            width: 40%;
+            @include flex-column;
+            text-align: center;
+            font-family: averox;
+            color: $font-color;
+            border-right: solid 0.01vw $color-hover;
+            justify-content: center;
+            height: 30vh;
+            font-size: 1.5vw;
+            padding: 3vw;
+        }
+
+
+        .flecha {
+            font-size: 2vw;
+            font-weight: bold;
+            @include degradado;
+        }
+
+
+        .trabajo {
+            width: 15%;
+            color: $font-color;
+            text-align: center;
+            text-wrap: pretty;
+            font-family: averox;
+            font-size: 1.2vw;
+
+
+            img {
+                width: 10vw;
+                height: auto;
+            }
+        }
+    }
+}

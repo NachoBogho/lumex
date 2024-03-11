@@ -1,0 +1,146 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.display-cursos {
+
+    view-timeline-name: --cards;
+    view-timeline-axis: block;
+
+    animation-timeline: --cards;
+    animation-name: show;
+
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
+
+    @keyframes show {
+        from {
+            opacity: 0;
+            scale: 80%;
+        }
+
+        to {
+            opacity: 1;
+            scale: 100%;
+        }
+ 
+    }
+
+    .display-section {
+        @include flex-row;
+        align-items: center;
+        width: 100%;
+        padding: 5vw;
+        gap: 7vw;
+
+        .section-cursos-1 {
+            @include flex-column;
+            gap: 2vw;
+            width: 50%;
+
+            .link-cursos{
+                text-decoration: none;
+                color: $font-color;
+                font-family: averox;
+                font-size: 1.5vw;
+                color: $font-color;
+                margin-bottom: 2vw;
+                border: solid 0.01vw $color-hover;
+                width: fit-content;
+                font-weight: bold;
+                padding: 1vw;
+
+                &:hover {
+                    font-weight: bold;
+                    @include degradado;
+                }
+            }
+
+            .titulo-cursos {
+                @include flex-column;
+                gap: 1vw;
+                text-align: start;
+
+                h5 {
+                    @include degradado;
+                    font-size: 3vw;
+                    font-family: averox;
+                    font-weight: bold;
+            
+                }
+
+                p {
+                    color: $font-color;
+                    font-family: $font-monserrat;
+                    font-size: 1.5vw;
+                    
+                }
+
+                div{
+                    
+                    .oferta{
+                         font-family: $font-monserrat;
+                         text-decoration: line-through;
+                         opacity: 30%;
+                         
+
+                    }
+                    .precio{
+                        font-family: $font-monserrat;
+                        @include degradado;
+                    }
+
+                    
+                }
+            }
+
+            p {
+                color: $font-color;
+                font-family: $font-monserrat;
+                font-size: 1.2vw;
+
+            }
+            
+
+        }
+
+        .section-cursos-2 {
+            @include flex-column;
+            width: 50%;
+            gap: 2vw;
+            margin-bottom: 3vw;
+            h5 {
+                color: $font-color;
+                font-size: 1.5vw;
+                font-family: averox;
+                text-align: start;
+                border-bottom: solid 0.05vw $color-hover;
+                padding-bottom: 0.5vw;
+                width: fit-content;
+                font-weight: bold;
+            }
+
+            p{
+                color: $font-color;
+                font-family: $font-monserrat;
+                text-align: start;
+                font-size: 1.2vw;
+            }
+            ul{
+                @include flex-column;
+                color:$font-color;
+                font-family: $font-monserrat;
+                gap: 1vw;
+
+
+                .list-item-curso{
+                    font-family: $font-monserrat;
+                    font-size: 1vw;
+                }
+                i{
+                    @include degradado;
+                }
+            }
+                
+        }
+    }
+}

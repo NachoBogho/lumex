@@ -1,0 +1,124 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+
+.display-contacto {
+    @include flex-column;
+    margin-top: 9vw;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5vw;
+    margin-bottom: 5vw;
+
+    view-timeline-name: --cards;
+    view-timeline-axis: block;
+
+    animation-timeline: --cards;
+    animation-name: show;
+
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
+
+    @keyframes show {
+        from {
+            opacity: 0;
+            scale: 80%;
+        }
+
+        to {
+            opacity: 1;
+            scale: 100%;
+        }
+    }
+
+    h2 {
+        font-family: averox;
+        font-size: 2.5vw;
+        @include degradado;
+        font-weight: bold
+    }
+
+
+
+    .display-formulario-c {
+        @include flex-row;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        font-family: $font-monserrat;
+        gap: 5vw;
+
+        .lista-datos-contacto {
+            @include flex-column;
+            justify-content: center;
+            gap: 3vw;
+
+            h3 {
+                font-family: averox;
+                font-size: 1.3vw;
+                color: $font-color;
+                font-weight: bold;
+            }
+
+            div {
+                @include flex-column;
+                gap: 1vw;
+
+                h4 {
+                    @include degradado;
+                }
+
+                li {
+                    color: $font-color;
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+    .display-form {
+        @include flex-column;
+        gap: 2.3vw;
+        align-items: end;
+
+        input {
+            width: 27vw;
+            background-color: $bg-color-dark;
+            border: none;
+            padding: 0.5vw;
+            border-bottom: solid 0.01vw $color-hover;
+            color: $font-color;
+            font-family: $font-monserrat;
+
+        }
+
+        textarea {
+            width: 27vw;
+            background-color: $bg-color-dark;
+            border: none;
+            padding: 0.5vw;
+            border-bottom: solid 0.01vw $color-hover;
+            color: $font-color;
+            font-family: $font-monserrat;
+        }
+
+        .button-send {
+            border: solid 0.01vw $color-hover;
+            color: $color-hover ;
+            font-size: 1vw;
+            font-family: $font-monserrat;
+            width: 10vw;
+
+            &:hover {
+                transform: matrix(1.03, 0, 0, 1.03, 0, 0);
+                transition: all 0.5s ease-in-out;
+            }
+        }
+
+    }
+}
+

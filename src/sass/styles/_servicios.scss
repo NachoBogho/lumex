@@ -1,0 +1,17 @@
+ @import '../abstracts/mixins';
+@import '../abstracts/variables'; 
+
+
+.display-item{
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vw;
+    gap: 4vw;
+
+    h2{
+        @include degradado;
+        font-size: 3vw;
+        font-family: averox;
+    }
+}

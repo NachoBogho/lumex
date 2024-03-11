@@ -1,0 +1,20 @@
+@import './sass/abstracts/mixins';
+@import './sass/abstracts/variables';   
+
+*::-webkit-scrollbar{
+    background: #1c1c1c;
+    width: 0vw;
+}
+*::-webkit-scrollbar-thumb {
+    background: #1c1c1c;
+}
+
+*{
+    scroll-behavior: smooth;
+}
+
+
+.page-display{
+    @include flex-column;
+    background-color: $bg-color-dark;
+}

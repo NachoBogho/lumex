@@ -1,0 +1,81 @@
+@import '../abstracts/mixins'; /* Asegúrate de que los archivos mixin y variables existan y estén correctamente definidos */
+@import '../abstracts/variables';
+
+
+.productos-section{
+     display: flex;
+     margin-bottom: 5vw;
+     padding: 2vw;
+    .productos-display {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 3vw;
+
+       
+    
+        .productos {
+            @include flex-column;
+            justify-content: stretch;
+            align-items: center;
+            width: 30vw; 
+            gap: 2.8vw;
+            font-family: $font-monserrat;
+            margin-top: 4vw;
+            margin-bottom: 15vw;
+            padding: 2vw;
+            height: 25vw;
+
+            .precio{
+                font-size: 1.1vw;
+                opacity: 0.8;
+                color: $color-hover;
+
+                span{
+                    color: #fff;
+                }
+            }
+
+            img{
+                width: 25vw;
+                
+            }
+             
+            h2{
+                @include degradado;
+                font-size: 2vw;
+
+            }
+
+            p{
+                color: $font-color;
+                font-family: $font-monserrat;
+                font-size: 0.9vw;
+                text-align: center;
+
+            }
+
+            .botones-productos{
+                @include flex-row;
+                gap: 4vw;
+                
+
+                a{
+                font-size: 1.4vw;
+                opacity: 0.6;
+                 text-decoration: none;
+                 color: $color-hover;
+                
+                 &:hover{
+                    color: grey;
+                 }
+                }
+
+
+            }
+        }
+    }
+
+}

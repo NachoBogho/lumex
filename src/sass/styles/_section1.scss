@@ -1,0 +1,88 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.display-section1{
+    @include flex-row;
+    width: 100%;
+    align-items: center;
+    padding: 5vw;
+    view-timeline-name: --cards;
+    view-timeline-axis: block;
+    animation-timeline: --cards;
+    animation-name: show;
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
+
+    @keyframes show {
+        from {
+            opacity: 0;
+            scale: 80%;
+        }
+
+        to {
+            opacity: 1;
+            scale: 100%;
+        }
+    }
+
+
+.display-boton{
+    @include flex-column;
+    justify-self: center;
+    align-items: end;
+    width: 50%;
+    a{
+        text-decoration: none;
+        @include degradado;
+        font-family: averox;
+        border: solid 0.01vw $color-hover; 
+        font-size: 1.6vw;
+        padding: 1.8vw;
+        
+
+    }
+    &:hover {
+        transform: matrix(1.03, 0, 0, 1.03, 0, 0);
+        transition: all 0.3s ease-in-out;
+    }
+}
+.display-beneficios{
+    @include flex-column;
+    gap: 1vw;
+    
+}
+    h5{
+        color: $font-color;
+        font-family: $font-monserrat;
+        font-size: 2vw;
+    
+    }
+    h3 {
+        font-family: averox;
+        font-size: 3vw;
+        @include degradado;
+        font-weight: bold;
+    }
+
+    p{
+        font-family: $font-monserrat;
+        color: $font-color;
+        font-size: 1.3vw;
+        width: 60%;
+    
+    }
+    ul{
+        @include flex-column;
+        gap: 1.4vw;
+        font-size: 1.3vw;
+        color: $font-color;
+        font-family: $font-monserrat;
+
+        span {
+            font-weight: bold;
+            font-size: 2vw;
+            @include degradado;
+
+        }
+    }
+}

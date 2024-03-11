@@ -1,0 +1,105 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.planes-display{
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vw;
+    margin-bottom: 5vw;
+    view-timeline-name: --cards;
+    view-timeline-axis: block;
+
+    animation-timeline: --cards;
+    animation-name: show;
+
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
+
+    @keyframes show {
+        from {
+            opacity: 0;
+            scale: 80%;
+        }
+
+        to {
+            opacity: 1;
+            scale: 100%;
+        }
+
+    }
+
+    .planes-titulo{
+
+        h3{
+            @include degradado;
+            text-align: center;
+            font-family: averox;
+            font-size: 2.5vw;
+            font-weight: bold;
+            padding-bottom: 2vw;
+        }
+
+        p{
+            text-align: center;
+            font-family: averox;
+            color: $font-color;
+            font-size: 1.2vw
+        }
+
+    }
+
+    .planes-display-servicios{
+        @include flex-column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+
+
+    .display-servicio{
+        @include flex-row;
+        margin-top: 3vw;
+        gap: 15vw;
+        
+        div{
+            @include flex-column;
+            justify-content: center;
+            align-items: center;
+            gap: 1vw;
+            width: 15vw;
+            i{
+                @include degradado;
+                font-size: 1.8vw;
+                border: solid 0.01vw $color-hover;
+                padding: 0.8vw;
+                border-radius: 60%;
+                
+            }
+            h5{
+                font-size: 1.8vw;
+                font-family: averox;
+                color: $font-color;
+            }
+
+            a {
+                text-decoration: none;
+                color: $font-color;
+                font-family: averox;
+                font-size: 0.8vw;
+                color: $font-color;
+                margin-bottom: 2vw;
+
+                &:hover {
+                    font-weight: bold;
+                    transition: all 0.5s ease-in-out;
+                    font-size: 0.9vw;
+                    color: $color-hover;
+                }
+
+        }
+
+    }
+    }
+}
+}
